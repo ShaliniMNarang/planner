@@ -10,4 +10,13 @@ public class Utility {
 		DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
 		return df.format(date);
 	}
+	
+	public static String geyKeyName(String eventId, String fileName) {
+		String SUFFIX = "/";
+		StringBuffer sb = new StringBuffer();
+		sb.append(eventId);
+		sb.append(SUFFIX);
+		sb.append(fileName);
+		return sb.toString();
+	}
 }

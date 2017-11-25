@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.core.io.InputStreamResource;
 
+import com.easyupload.photos.entity.Comment;
 import com.easyupload.photos.model.FileDetail;
 
 public interface S3Services {
@@ -14,4 +15,6 @@ public interface S3Services {
 	public void uploadFile(String keyName,InputStream uploadFile);
 	public void deleteFile(String keyName);
 	public List<FileDetail> getFileNames();
+	public String createItems(Number eventId,String comment);
+	public List<Comment> getItems(Long eventId);
 }

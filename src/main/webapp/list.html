@@ -1,34 +1,33 @@
 <div class="panel panel-default">
   <!-- Default panel contents -->
 	<div class="row">
-    <div class="col-md-6 panel-heading" style="padding-left:20px;font-size:1.3em;">File List</div>
-    <div class="col-md-6 text-right panel-heading" style="padding-right:20px;"><a href="#!uploadfile" class="btn btn-default" role="button" style="padding-right:10px;font-size:1.3em;">Upload File</a></div>
+    <div class="col-md-6 panel-heading" style="padding-left:20px;font-size:1.3em;">{{userId}}'s Events</div>
+    <!-- div class="col-md-6 text-right panel-heading" style="padding-right:20px;"><a href="#!eventcreate" class="btn btn-default" role="button" style="padding-right:10px;font-size:1.3em;">Create Event</a></div>-->
   </div>
 
   <!-- Table -->
 	<table class="table table-striped table-hover table-users">
 		<thead style="background-color: darkgray;">
 			<tr>
-				<th>File Name</th>
-				<th>User Name</th>
-				<th>Upload Time</th>
-				<th>Updated Time</th>	
+				<th>Event Title</th>
+				<th>Event Date</th>
+				<th>Event Time</th>	
 				<th></th>	
-				<th></th>								
+				<th></th>
+				<th ng-show="false">Event Id<th>												
 			</tr>
 		</thead>
 
 		<tbody>
-
-			<tr ng-repeat="file in files">
-				<td><a ng-click="fileClicked(file.fileName)">{{file.fileName}}</a></td>
-				<td>{{file.owner}}</td>
-				<td>{{file.lastModified}}</td>
-				<td>{{file.lastModified}}</td>
-				<td><a id="download" ng-click="download(file.fileName)" class="btn mini blue-stripe"
-					href="">Download</a></td>
-				<td><a id="delete" ng-click="delete(file.fileName)" class="btn mini blue-stripe"
-					href="">Delete</a></td>
+			<tr ng-repeat="event in events">
+				<td><a ng-click="eventClicked(event.id)">{{event.title}}</a></td>
+				<td>{{event.eventDate}}</td>
+				<td>{{event.eventTime}}</td>
+				<td><a id="uploadPhoto" ng-click="updateId(event.id)" class="btn mini blue-stripe"
+					href="#!uploadPhoto">upload Photo</a></td>
+				<td><a id="invitees" ng-click="updateId(event.id)" class="btn mini blue-stripe"
+					href="#!invitees">Invitees</a></td>
+				<td ng-show="false">{{event.id}}</td>						
 			</tr>
 		</tbody>
 
