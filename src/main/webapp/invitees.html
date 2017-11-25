@@ -1,0 +1,43 @@
+<form class="form-horizontal" role="form" name="inviteeForm">
+	<div class="row">
+		<div class="col-md-6 panel-heading"
+			style="padding-left: 20px; font-size: 1.3em;">Invitees</div>
+		<div class="col-md-6 text-right panel-heading"
+			style="padding-right: 20px;">
+			<a ng-click="addInviteeRow()" class="btn btn-default" role="button"
+				style="padding-right: 10px; font-size: 1.3em;">Add Guest</a>
+		</div>
+	</div>
+	<table id="guestList" class=" table order-list"
+		ng-repeat="invitee in invitees">
+		<thead>
+			<tr>
+				<td>Guest Name</td>
+				<td>Email</td>
+				<td>Phone</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="col-sm-4"><input type="text" name="name"
+					class="form-control" ng-model="invitee.name"/></td>
+				<td class="col-sm-4"><input type="mail" name="mail"
+					class="form-control" ng-model="invitee.email"/></td>
+				<td class="col-sm-3"><input type="text" name="phone"
+					class="form-control" ng-model="invitee.phone"/></td>
+				<td><input type="button" class="ibtnDel btn btn-md btn-danger "
+					ng-click="deleteRow(invitee)" value="Delete"></td>
+			</tr>
+		</tbody>
+	</table>
+	<div colspan="5" style="text-align: left;"><input type="button"
+					class="btn btn-lg btn-block " ng-click="sendInvite('invite')" id="sendinvite" value="Send Invite" /></div>
+	</div>
+	<br/>
+	<div colspan="5" style="text-align: left;"><input type="button"
+					class="btn btn-lg btn-block " ng-click="sendInvite('thankyou')" id="sendthankyou" value="Send Thank You" /></div>
+	</div>
+	<div class="alert alert-success" ng-show="invitationSent">
+		<strong>Success!</strong> Invitation Sent!!
+	</div>
+</form>

@@ -1,0 +1,49 @@
+<form class="form-horizontal" role="form" name="inviteeForm">
+	<div class="row">
+		<div class="col-md-6 panel-heading"
+			style="padding-left: 20px; font-size: 1.3em;">Upload Photo</div>
+		<div class="col-md-6 text-right panel-heading"
+			style="padding-right: 20px;">
+			<a ng-click="addPhotoRow()" class="btn btn-default" role="button"
+				style="padding-right: 10px; font-size: 1.3em;">Add Photo</a>
+		</div>
+	</div>
+	<table id="guestList" class=" table order-list"
+		ng-repeat="photo in photos">
+		<tbody>
+			<tr>
+				<td class="col-sm-4">
+					<div class="container">
+						<div class="row">
+							<div class="form-group">
+								<label for="image" class="col-sm-3 control-label">Photo</label>
+								<div class="col-sm-6">
+									<input type="file" class="form-control" id="photo"
+										placeholder="Photo..." file-model="photo.file" required>
+								</div>
+								<div class="col-sm-3">
+								<input type="button" class="ibtnDel btn btn-md btn-danger "
+												ng-click="deleteRow(photo)" value="Delete">
+								</div>
+							</div>
+						</div>
+					</div>
+				</td>
+				<!-- 				<td><input type="button" class="ibtnDel btn btn-md btn-danger "
+					ng-click="deleteRow(invitee)" value="Delete"></td> -->
+			</tr>
+		</tbody>
+	</table>
+	<div colspan="5" style="text-align: left;">
+		<input type="button" class="btn btn-lg btn-block " ng-click="uploadPhoto()" id="uploadphoto"
+			value="Upload" />
+	</div>
+	<br/>
+	<div>
+		<button type="button" class="btn btn-secondary btn-lg btn-block" ng-click="uploadedPhotos()">Uploaded Photos</button>
+	</div>
+	<div class="alert alert-success" ng-show="photoUploaded">
+		<strong>Success!</strong> Photos Uploaded!!
+	</div>
+	</div>
+</form>

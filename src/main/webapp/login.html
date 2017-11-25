@@ -1,0 +1,29 @@
+<div div ng-controller="loginController" class="container">
+		<div class="col-lg-4">
+		</div>
+				
+		<div class="col-lg-4">
+			<div class="jumbotron" style="margin-top:150px">
+				<h4><center>Sign In</center></h4>
+				<br/>
+				<form>
+					<div class="form-group">
+						<input type="text" class="form-control" id="userId" ng-model="userId" placeholder="Enter Username"/>
+					</div>
+				  
+					<div class="form-group">
+						<input type="password" class="form-control" id="password" ng-model="password" placeholder="Enter Password"/>
+					</div>
+					
+					<button type="submit" class="btn btn-primary form-control" ng-click="doLogin()">Login</button>
+				</form>
+			
+				<hr>
+				<button type="submit" class="btn btn-default form-control" ng-click="doSignup()">Sign up</button>
+				
+			</div>
+			
+		
+		<div class="col-lg-4">
+		</div>
+</div>

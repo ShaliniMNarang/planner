@@ -1,0 +1,83 @@
+
+<div class="container" controller="signupController">
+
+<form class="well form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend><center><h2>SignUp For Free !!!</h2></center></legend><br>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">First Name</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"></span>
+  <input  name="first_name" placeholder="First Name" class="form-control"  type="text" ng-model="firstName">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Last Name</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"></span>
+  <input name="last_name" placeholder="Last Name" class="form-control"  type="text" ng-model="lastName">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Username</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"></span>
+  <input  name="user_name" placeholder="Username" class="form-control"  type="text" ng-model="userId">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label" >Password</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"></span>
+  <input name="user_password" placeholder="Password" class="form-control"  type="password" ng-model="password">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">E-Mail</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"></span>
+  <input name="email" placeholder="E-Mail Address" class="form-control"  type="text" ng-model="mailId">
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4"><br>
+   <button type="submit" class="btn btn-primary" ng-click="doSignUp()">SUBMIT</button>
+   <button type="cancel" class="btn btn-primary" ng-click="doCancel()">CANCEL</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</div><!-- /.container -->
+

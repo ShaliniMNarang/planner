@@ -1,0 +1,35 @@
+aws.access_key_id=
+aws.secret_access_key=
+s3.bucket=
+s3.region=
+s3.uploadfile=
+s3.key=
+
+server.port = 
+server.contextPath=/event-planner
+
+# JPA Config
+spring.jpa.show-sql=true
+spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect
+
+## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+
+spring.datasource.url = 
+spring.datasource.username = 
+spring.datasource.password = 
+#spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+
+
+## Hibernate Properties
+
+# The SQL dialect makes Hibernate generate better SQL for the chosen database
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5Dialect
+
+# Hibernate ddl auto (create, create-drop, validate, update)
+spring.jpa.hibernate.ddl-auto = update
+
+email.userName=
+email.password=
+
+twilio.acount_id=
+twilio.auth_token=
