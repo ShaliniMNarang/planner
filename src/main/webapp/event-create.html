@@ -52,7 +52,12 @@
 					<div class="form-group">
 						<label for="upload" class="col-sm-3 control-label"></label>
 						<div class="col-sm-9">
-							<button id="upload" ng-click="createEvent()" class="btn btn-primary"
+							<button id="upload" ng-if="action=='Create Event'" ng-click="createEvent()" class="btn btn-primary"
+								ng-disabled="creating">
+								<i ng-show="creating" class="fa fa-refresh fa-spin fa-1x"></i>
+								{{action}}
+							</button>
+							<button id="upload" ng-if="action=='Update Event'" ng-click="createEvent()" class="btn btn-primary"
 								ng-disabled="creating">
 								<i ng-show="creating" class="fa fa-refresh fa-spin fa-1x"></i>
 								{{action}}

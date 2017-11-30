@@ -67,7 +67,7 @@ public class FileController {
 	@Autowired
 	private EmailService emailService;
 	
-	@Autowired
+	//@Autowired
 	private MMSService mmsService;
 	
 	@Autowired
@@ -238,14 +238,22 @@ public class FileController {
 	
 	//used
 	@RequestMapping("/createevent")
-	public Event createEvent(@RequestParam(value="title", required=true) String title,
+	public Event createEvent(@RequestParam(value="eventId") String eventId,
+			@RequestParam(value="title", required=true) String title,
 			@RequestParam(value="location", required=true) String location,
 			@RequestParam(value="eventDate", required=true) String eventDate,
 			@RequestParam(value="eventTime", required=true) String eventTime,
 			@RequestParam(value="description") String description,
 			@RequestParam(value="userId") String userId) {
+		Event event;
+		System.out.println("eventId:"+eventId);
+		if (eventId.isEmpty() || eventId==null) {
+			event=new Event(userId,title,location,eventDate,eventTime,description);
+		} else {
+			 event=new Event(userId,title,location,eventDate,eventTime,description);
+			event.setId(Long.parseLong(eventId));
+		}
 		
-		Event event=new Event(userId,title,location,eventDate,eventTime,description);
 		event = eventRepository.save(event);
 		
 		String voiceKey = pollyService.generateVoiceInvite(Long.toString(event.getEventId()), userId, eventDate, eventTime, description);
@@ -255,14 +263,14 @@ public class FileController {
 	}
 	
 	//used
-	@RequestMapping("/getevents")
-	public List<Event> createEvent() {
-		return eventRepository.findAll();
+	@RequestMapping("/getevents/{userId}")
+	public List<Event> createEvent(@PathVariable("userId") String userId) {
+		return eventRepository.findByUserId(userId);
 	}
 	
 	//used
-	@RequestMapping("/getevents/{eventId}")
-	public Event getEvent(@PathVariable("eventId") Long eventId) {
+	@RequestMapping("/getevents/{userId}/{eventId}")
+	public Event getEvent(@PathVariable("userId") String userId,@PathVariable("eventId") Long eventId) {
 		return eventRepository.findByEventId(eventId).get(0);
 	}	
 	

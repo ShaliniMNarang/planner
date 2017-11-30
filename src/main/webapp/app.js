@@ -33,9 +33,10 @@ myApp.config(function($routeProvider, $qProvider) {
 });
 
 myApp.controller('appController', function($scope, $http, $window,
-		eventService, $location) {
+		eventService, $location,$rootScope) {
 	console.log('appController starting');
-	$http.get("/event-planner/event-planner/getevents").then(
+	console.log($rootScope.userId);
+	$http.get("/event-planner/event-planner/getevents/"+$rootScope.userId).then(
 			function(response) {
 				console.log(response.data);
 				$scope.events = response.data;
@@ -53,32 +54,37 @@ myApp.controller('appController', function($scope, $http, $window,
 });
 
 myApp.controller('eventCreateController', function($scope, httpPost,
-		eventService, $http) {
+		eventService, $http,$rootScope) {
+	$scope.userId=$rootScope.userId;
 	$scope.eventCreated = false;
 	var eventId = eventService.getEventId();
-	if (eventId === null) {
-		console.log("created event")
-		$scope.title = "Create Event";
-		$scope.action = "Create Event";
-		$scope.createEvent = function() {
-			var fd = new FormData();
-			fd.append('title', $scope.eventtitle);
-			fd.append('location', $scope.location);
-			fd.append('eventDate', $scope.eventdate);
-			fd.append('eventTime', $scope.eventtime);
-			fd.append('description', $scope.description);
-			fd.append('userId', $scope.userId);
-			var postUrl = "/event-planner/event-planner/createevent";
-			httpPost.postCall(fd, postUrl);
-			$scope.eventCreated = true;
-			eventService.setEventId(null);
-			//$location.url("/list");
-			window.history.back();
-		};
-	} else {
-		$scope.title = "Update Event";
-		$scope.action = "Update Event";
-		$http.get("/event-planner/event-planner/getevents/" + eventId).then(
+	$scope.createEvent=function() {
+		console.log(eventId);
+		var fd = new FormData();
+		if(eventId == null){
+			console.log('event null');
+			fd.append('eventId', '');
+		} else{
+			console.log('event not null');
+			fd.append('eventId', eventId);
+		}
+		fd.append('title', $scope.eventtitle);
+		fd.append('location', $scope.location);
+		fd.append('eventDate', $scope.eventdate);
+		fd.append('eventTime', $scope.eventtime);
+		fd.append('description', $scope.description);
+		fd.append('userId', $scope.userId);
+		var postUrl = "/event-planner/event-planner/createevent";
+		httpPost.postCall(fd, postUrl);
+		$scope.eventCreated = true;
+		eventService.setEventId(null);
+		//$location.url("/list");
+		window.history.back();
+		getEvents();
+	};
+	
+	var getEvent=function(){
+		$http.get("/event-planner/event-planner/getevents/" + $scope.userId+"/"+eventId).then(
 				function(response) {
 					console.log("getevents:" + eventId);
 					console.log(response.data);
@@ -89,6 +95,24 @@ myApp.controller('eventCreateController', function($scope, httpPost,
 					$scope.description = response.data.description;
 					eventService.setEventId(null);
 				});
+	};
+	
+	var getEvents=function(){
+		$http.get("/event-planner/event-planner/getevents/"+$scope.userId).then(
+				function(response) {
+					console.log(response.data);
+					$scope.events = response.data;
+				});
+	}
+	if (eventId === null) {
+		console.log("created event")
+		$scope.title = "Create Event";
+		$scope.action = "Create Event";
+		//$scope.createEvent = createEvent();
+	} else {
+		$scope.title = "Update Event";
+		$scope.action = "Update Event";
+		getEvent();
 	}
 
 });
