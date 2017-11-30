@@ -67,7 +67,7 @@ public class FileController {
 	@Autowired
 	private EmailService emailService;
 	
-	//@Autowired
+	@Autowired
 	private MMSService mmsService;
 	
 	@Autowired
