@@ -24,6 +24,10 @@ myApp.config(function($routeProvider, $qProvider) {
 	}).when("/invitees", {
 		templateUrl : "invitees.html",
 		controller : "inviteesController"
+	}).when("/eventbot", {
+		templateUrl : "event-bot.html"
+	}).when("/bireports", {
+		templateUrl : "event-bi-reports.html"
 	}).when("/uploadPhoto", {
 		templateUrl : "upload-photo.html",
 		controller : "uploadphotoController"
