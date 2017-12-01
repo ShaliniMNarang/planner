@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Chatbot</title>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div style="width:1100; margin: 20px auto;">
+            <div>
+                <h2>Microsoft PowerBI Dashboard</h2>
+            </div>
+            <iframe src="<%= POWER_BI_REPORT_URL %>" frameborder="0" allowFullScreen="true"></iframe>
+        </div>
+
+
+        <style>
+            iframe{
+                width:100%;
+                height: 700px;
+                margin:auto;
+                border: 2px solid #999;
+                margin-top:20px;
+            }
+        </style>
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    </body>
+</html>
