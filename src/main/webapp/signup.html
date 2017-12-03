@@ -1,17 +1,15 @@
 
-<div class="container" controller="signupController">
-
+<div controller="signupController" style="margin: 150px 400px 400px 400px;">
 <form class="well form-horizontal">
 <fieldset>
 
 <!-- Form Name -->
-<legend><center><h2>SignUp For Free !!!</h2></center></legend><br>
+<legend><center><h4>SignUp For Free !!!</h4></center></legend><br>
 
 <!-- Text input-->
-
 <div class="form-group">
-  <label class="col-md-4 control-label">First Name</label>  
-  <div class="col-md-4 inputGroupContainer">
+  <label class="col-md-3 control-label">First Name</label>  
+  <div class="col-md-8 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"></span>
   <input  name="first_name" placeholder="First Name" class="form-control"  type="text" ng-model="firstName">
@@ -22,8 +20,8 @@
 <!-- Text input-->
 
 <div class="form-group">
-  <label class="col-md-4 control-label" >Last Name</label> 
-    <div class="col-md-4 inputGroupContainer">
+  <label class="col-md-3 control-label" >Last Name</label> 
+    <div class="col-md-8 inputGroupContainer">
     <div class="input-group">
   <span class="input-group-addon"></span>
   <input name="last_name" placeholder="Last Name" class="form-control"  type="text" ng-model="lastName">
@@ -34,8 +32,8 @@
 <!-- Text input-->
 
 <div class="form-group">
-  <label class="col-md-4 control-label">Username</label>  
-  <div class="col-md-4 inputGroupContainer">
+  <label class="col-md-3 control-label">Username</label>  
+  <div class="col-md-8 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"></span>
   <input  name="user_name" placeholder="Username" class="form-control"  type="text" ng-model="userId">
@@ -46,8 +44,8 @@
 <!-- Text input-->
 
 <div class="form-group">
-  <label class="col-md-4 control-label" >Password</label> 
-    <div class="col-md-4 inputGroupContainer">
+  <label class="col-md-3 control-label" >Password</label> 
+    <div class="col-md-8 inputGroupContainer">
     <div class="input-group">
   <span class="input-group-addon"></span>
   <input name="user_password" placeholder="Password" class="form-control"  type="password" ng-model="password">
@@ -57,8 +55,8 @@
 
 <!-- Text input-->
        <div class="form-group">
-  <label class="col-md-4 control-label">E-Mail</label>  
-    <div class="col-md-4 inputGroupContainer">
+  <label class="col-md-3 control-label">E-Mail</label>  
+    <div class="col-md-8 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"></span>
   <input name="email" placeholder="E-Mail Address" class="form-control"  type="text" ng-model="mailId">
@@ -70,10 +68,10 @@
 
 <!-- Button -->
 <div class="form-group">
-  <label class="col-md-4 control-label"></label>
-  <div class="col-md-4"><br>
-   <button type="submit" class="btn btn-primary" ng-click="doSignUp()">SUBMIT</button>
-   <button type="cancel" class="btn btn-primary" ng-click="doCancel()">CANCEL</button>
+  <label class="col-md-5 control-label"></label>
+  <div class="col-md-6"><br>
+   <button type="button" class="btn btn-default" ng-click="doSignUp()"><span class="glyphicon glyphicon-ok"></span>SUBMIT</button>
+   <button type="button" class="btn btn-default" ng-click="doCancel()"><span class="glyphicon glyphicon-remove"></span>CANCEL</button>
   </div>
 </div>
 

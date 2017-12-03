@@ -1,16 +1,17 @@
-<div ng-controller="eventCreateController"
-	class="container theme-showcase jumbotron panel panel-primary"
-	style="background-color: white;">
+<div ng-controller="eventCreateController" style="width:55%;margin-top: 150px;"
+	class="container jumbotron linear gradient"
+	 >
 	<div>
-		<div class="panel-heading">
-			<h3 class="panel-title">{{title}}</h3>
+		<div class="panel-heading" style="padding-left:10%;border-bottom:1px solid #ccc">
+			<h4 style="font-weight:bold" class="panel-title">{{title}}</h4>
 		</div>
-		<form class="form-horizontal" role="form" name="eventForm">
+		<form class="form-horizontal" role="form" name="eventForm" style="padding-top:3%">
 			<div class="row">
 				<div class="col-md-12">
 
 					<div class="form-group">
-						<label for="eventtitle" class="col-sm-3 control-label">Event Title</label>
+						<label for="eventtitle" class="col-sm-3 control-label">Event
+							Title</label>
 						<div class="col-sm-9">
 							<input type="text" class="form-control" id="eventtitle"
 								placeholder="Event Title..." ng-model="eventtitle" required>
@@ -27,46 +28,57 @@
 				</div>
 				<div class="col-md-12">
 					<div class="form-group">
-						<label for="eventdate" class="col-sm-3 control-label">Event Date</label>
+						<label for="eventdate" class="col-sm-3 control-label">Event
+							Date</label>
 						<div class="col-sm-9">
 							<input type="text" class="form-control" id="eventdate"
 								placeholder="Event Date..." ng-model="eventdate" required>
 						</div>
 					</div>
 				</div>
+				<div class="col-md-12">
 					<div class="form-group">
-						<label for="eventtime" class="col-sm-3 control-label">Event Time</label>
-						<div class="col-sm-9" style="padding-left: 23px;">
+						<label for="eventtime" class="col-sm-3 control-label">Event
+							Time</label>
+						<div class="col-sm-9">
 							<input type="text" class="form-control" id="eventtime"
 								placeholder="Event Time..." ng-model="eventtime" required>
 						</div>
-					</div>	
+					</div>
+				</div>
+				<div class="col-md-12">
+
 					<div class="form-group">
 						<label for="description" class="col-sm-3 control-label">Description</label>
-						<div class="col-sm-9" style="padding-left: 23px;">
+						<div class="col-sm-9">
 							<input type="text" class="form-control" id="description"
 								placeholder="Description..." ng-model="description" required>
 						</div>
-					</div>													
+					</div>
+				</div>
 				<div class="col-md-12">
 					<div class="form-group">
 						<label for="upload" class="col-sm-3 control-label"></label>
-						<div class="col-sm-9">
-							<button id="upload" ng-if="action=='Create Event'" ng-click="createEvent()" class="btn btn-primary"
+						<div class="col-sm-2">
+							<button id="upload" ng-if="action=='Create Event'"
+								ng-click="createEvent()" class="btn-default form-control"
 								ng-disabled="creating">
 								<i ng-show="creating" class="fa fa-refresh fa-spin fa-1x"></i>
 								{{action}}
+								<span class="glyphicon glyphicon-ok"></span>
 							</button>
-							<button id="upload" ng-if="action=='Update Event'" ng-click="createEvent()" class="btn btn-primary"
+							<button id="upload" ng-if="action=='Update Event'"
+								ng-click="createEvent()" class="btn-default form-control"
 								ng-disabled="creating">
 								<i ng-show="creating" class="fa fa-refresh fa-spin fa-1x"></i>
 								{{action}}
+								<span class="glyphicon glyphicon-ok"></span>
 							</button>
 						</div>
 					</div>
 				</div>
 		</form>
-<!-- 		<input type="file" file-model="myFile" />
+		<!-- 		<input type="file" file-model="myFile" />
 		<button ng-click="uploadFile()">upload me</button> -->
 	</div>
 	<div class="alert alert-success" ng-show="eventCreated">
