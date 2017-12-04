@@ -24,7 +24,7 @@ Website - http://eventplanner.themodestwhite.com
 ![Screenshot](BIReport.png)
 
 ### Prereuisite Setup
-To be able to run this project locally below pre-requisites are required to be made -</br>
+To be able to run this project locally below pre-requisites are required to be made -</br></br>
 1)Register/create to an AWS account</br>
 2)Create an Amazon S3 bucket with defined security policies</br>
 3)Create and activate Amazon MySQL, RDS instance</br>
@@ -50,7 +50,7 @@ email.password</br>
 twilio.acount_id</br>
 twilio.auth_token</br>
 
-### Steps to run the project locally
+### Steps to run the project locally</br>
 -Download the source code from GIT and import it as a maven project into eclipse. When the project is imported the maven pom.xml will resolve and import all the dependencies. The dependencies include AWS SDK, Spring Boot.</br>
 -Run Project in eclipse as spring boot App</br>
 -Check the application on "http://localhost:"server.port"/event-planner/"</br>
