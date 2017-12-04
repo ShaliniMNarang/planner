@@ -1,4 +1,4 @@
-###CPM281_Cloud Technologies Project 2 for Cohort 9 SJSU-FALL-2017 by Group 11 
+### CPM281_Cloud Technologies Project 2 for Cohort 9 SJSU-FALL-2017 by Group 11 
 
 ### Class Details
 - Fall 2017
@@ -9,7 +9,7 @@
 
 
 ### Team members
-##GROUP 11
+## GROUP 11
 - Sy Le (https://www.linkedin.com/in/syle1021/)
 - Chidananda Pati (https://www.linkedin.com/in/chidananda-pati-87235356/)
 - Shalini Narang
