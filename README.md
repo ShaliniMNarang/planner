@@ -33,22 +33,22 @@ To be able to run this project locally below pre-requisites are required to be m
 6)Softwares to download locally before running this application</br>
   -java 8 SDK</br>
   -Eclipse oxygen with STS</br>
-       
-   * NOTE - Update application.properties file for below parameters -</br>
-       aws.access_key_id</br>
-       aws.secret_access_key</br>
-       s3.bucket</br>
-       s3.region</br>
-       s3.uploadfile</br>
-       s3.key</br>
-       server.port </br>
-       spring.datasource.url</br>
-       spring.datasource.usernam </br>
-       spring.datasource.password</br>
-       email.userName</br>
-       email.password</br>
-       twilio.acount_id</br>
-       twilio.auth_token</br>
+  
+NOTE - Update application.properties file for below parameters -</br>
+aws.access_key_id</br>
+aws.secret_access_key</br>
+s3.bucket</br>
+s3.region</br>
+s3.uploadfile</br>
+s3.key</br>
+server.port </br>
+spring.datasource.url</br>
+spring.datasource.usernam </br>
+spring.datasource.password</br>
+email.userName</br>
+email.password</br>
+twilio.acount_id</br>
+twilio.auth_token</br>
 
 ### Steps to run the project locally
 -Download the source code from GIT and import it as a maven project into eclipse. When the project is imported the maven pom.xml will resolve and import all the dependencies. The dependencies include AWS SDK, Spring Boot.</br>
