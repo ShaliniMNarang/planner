@@ -25,5 +25,8 @@ Event-Planner is the trusted invitation service application. Its core feature is
 ### Application UI 
 
 ![Screenshot](welcome.png)
+![Screenshot](chatbot.png)
+![Screenshot](BIReport.png)
+
 ![alt text](./images/1.png "Sample Screenshot")
 ![alt text](./images/2.png "Sample Screenshot")
