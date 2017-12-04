@@ -1,4 +1,5 @@
 # Event Wedding Planner
+This Application platforms a polished and straightforward catering focused on the creation and sending of electronic invitations. Users can create an event, fill in information fields pertaining to their wedding event, build a guest list, and finally send the invitation via e-mail out to individuals using their email contact list.
 
 ## Class Information
 ### CMPE 281 Final Project - Chatbot section
