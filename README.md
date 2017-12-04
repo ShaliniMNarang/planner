@@ -28,30 +28,30 @@ Website - http://eventplanner.themodestwhite.com
 ![Screenshot](BIReport.png)
 
 ### Prereuisite Setup
-To be able to run this project locally below pre-requisites are required to be made -</br></br>
+To be able to run this project locally below pre-requisites are required to be made -</br>
 - Register/create to an AWS account</br>
 - Create an Amazon S3 bucket with defined security policies</br>
 - Create and activate Amazon MySQL, RDS instance</br>
 - Create Dynamo DB</br>
 - Create an IAM previledged user, generate access tokens for this user</br>
 - Softwares to download locally before running this application</br>
-  java 8 SDK</br>
-  Eclipse oxygen with STS</br>
+  - java 8 SDK</br>
+  - Eclipse oxygen with STS</br>
 - Update application.properties file for below parameters -</br>
-- _aws.access_key_id</br>_
-- _aws.secret_access_key</br>_
-- _s3.bucket</br>_
-- _s3.region</br>_
-- _s3.uploadfile</br>_
-- _s3.key</br>_
-- _server.port </br>_
-- _spring.datasource.url</br>_
-- _spring.datasource.usernam </br>_
-- _spring.datasource.password</br>_
-- _email.userName</br>_
-- _email.password</br>_
-- _twilio.acount_id</br>_
-- _twilio.auth_token</br>_
+  - _aws.access_key_id</br>_
+  - _aws.secret_access_key</br>_
+  - _s3.bucket</br>_
+  - _s3.region</br>_
+  - _s3.uploadfile</br>_
+  - _s3.key</br>_
+  - _server.port </br>_
+  - _spring.datasource.url</br>_
+  - _spring.datasource.usernam </br>_
+  - _spring.datasource.password</br>_
+  - _email.userName</br>_
+  - _email.password</br>_
+  - _twilio.acount_id</br>_
+  - _twilio.auth_token</br>_
 
 ### Steps to run the project locally</br>
 - Download the source code from GIT and import it as a maven project into eclipse. When the project is imported the maven pom.xml will resolve and import all the dependencies. The dependencies include AWS SDK, Spring Boot.</br>
