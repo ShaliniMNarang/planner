@@ -23,5 +23,7 @@ Event-Planner is the trusted invitation service application. Its core feature is
 - (Demo Url)[http://eventplanner.themodestwhite.com]
 
 ### Sample Demo Screenshots
+
+![Screenshot](welcome.png)
 ![alt text](./images/1.png "Sample Screenshot")
 ![alt text](./images/2.png "Sample Screenshot")
