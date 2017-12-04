@@ -14,9 +14,14 @@
 - Shalini Narang
 - Puja Kawale (https://www.linkedin.com/in/puja-kawale-126a1357)
 
-### Introduction to "Event Wedding Planner"
-This Application platforms a polished and straightforward catering focused on the creation and sending of electronic invitations. Users can create an event, fill in information fields pertaining to their wedding event, build a guest list, and finally send the invitation via e-mail out to individuals using their email contact list. It also allows the user to upload event photos and comment on them.
+### Project - 
+
+### Introduction to Application
+Wedding is an important occasion. It becomes difficult to manage the occasion and arrangements from different channels. Nowadays we have wedding planning companies who take complete responsibility of event with hefty budget. But, our solution is designed to target the public who have access to internet, knowledge to use the online services and want to save cost with not much manpower around.
+Application name : Event Wedding Planner
+This Application platforms a polished and straightforward catering focused on the creation and sending of electronic invitations. Users can create an event, fill in information fields related to their wedding event, create a guest list, and conclusively send the invitation via e-mail out to guest using their email contact list. It also allows the user to upload event photos and comment on them.
 Website - http://eventplanner.themodestwhite.com
+
 
 ### Application UI 
 ![Screenshot](welcome.png)
