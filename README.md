@@ -29,15 +29,15 @@ Website - http://eventplanner.themodestwhite.com
 
 ### Prereuisite Setup
 To be able to run this project locally below pre-requisites are required to be made -</br></br>
-1)Register/create to an AWS account</br>
-2)Create an Amazon S3 bucket with defined security policies</br>
-3)Create and activate Amazon MySQL, RDS instance</br>
-4)Create Dynamo DB</br>
-5)Create an IAM previledged user, generate access tokens for this user</br>
-6)Softwares to download locally before running this application</br>
-  -java 8 SDK</br>
-  -Eclipse oxygen with STS</br>
-7) Update application.properties file for below parameters -</br>
+- Register/create to an AWS account</br>
+- Create an Amazon S3 bucket with defined security policies</br>
+- Create and activate Amazon MySQL, RDS instance</br>
+- Create Dynamo DB</br>
+- Create an IAM previledged user, generate access tokens for this user</br>
+- Softwares to download locally before running this application</br>
+  java 8 SDK</br>
+  Eclipse oxygen with STS</br>
+- Update application.properties file for below parameters -</br>
 - _aws.access_key_id</br>_
 - _aws.secret_access_key</br>_
 - _s3.bucket</br>_
@@ -54,7 +54,7 @@ To be able to run this project locally below pre-requisites are required to be m
 - _twilio.auth_token</br>_
 
 ### Steps to run the project locally</br>
-1. Download the source code from GIT and import it as a maven project into eclipse. When the project is imported the maven pom.xml will resolve and import all the dependencies. The dependencies include AWS SDK, Spring Boot.</br>
-2. Run Project in eclipse as spring boot App</br>
-3. Check the application on "http://localhost:"server.port"/event-planner/"</br>
+- Download the source code from GIT and import it as a maven project into eclipse. When the project is imported the maven pom.xml will resolve and import all the dependencies. The dependencies include AWS SDK, Spring Boot.</br>
+- Run Project in eclipse as spring boot App</br>
+- Check the application on "http://localhost:"server.port"/event-planner/"</br>
 
