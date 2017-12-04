@@ -15,12 +15,12 @@
 - Shalini Narang
 - Puja Kawale (https://www.linkedin.com/in/puja-kawale-126a1357)
 
+### Project Introduction
 
+Event-Planner is the trusted invitation service application. Its core feature is to to send event invitation to invitees along with sharing event pictures and providing comments on them.
 
 ### Urls
 - (Demo Url)[http://eventplanner.themodestwhite.com]
-
-
 
 ### Sample Demo Screenshots
 ![alt text](./images/1.png "Sample Screenshot")
