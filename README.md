@@ -13,7 +13,7 @@
 - Sy Le (https://www.linkedin.com/in/syle1021/)
 - Chidananda Pati (https://www.linkedin.com/in/chidananda-pati-87235356/)
 - Shalini Narang
-- Puja Kawale
+- Puja Kawale (https://www.linkedin.com/in/puja-kawale-126a1357)
 
 
 
