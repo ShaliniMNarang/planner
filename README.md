@@ -24,34 +24,34 @@ Website - http://eventplanner.themodestwhite.com
 ![Screenshot](BIReport.png)
 
 ### Prereuisite Setup
-To be able to run this project locally below pre-requisites are required to be made -
-1)Register/create to an AWS account
-2)Create an Amazon S3 bucket with defined security policies
-3)Create and activate Amazon MySQL, RDS instance
-4)Create Dynamo DB
-5)Create an IAM previledged user, generate access tokens for this user.        
-6)Softwares to download locally before running this application
-  -java 8 SDK
-  -Eclipse oxygen with STS
+To be able to run this project locally below pre-requisites are required to be made -</br>
+1)Register/create to an AWS account</br>
+2)Create an Amazon S3 bucket with defined security policies</br>
+3)Create and activate Amazon MySQL, RDS instance</br>
+4)Create Dynamo DB</br>
+5)Create an IAM previledged user, generate access tokens for this user</br> 
+6)Softwares to download locally before running this application</br>
+  -java 8 SDK</br>
+  -Eclipse oxygen with STS</br>
        
-   * NOTE - Update application.properties file for below parameters -
-       aws.access_key_id
-       aws.secret_access_key
-       s3.bucket
-       s3.region
-       s3.uploadfile
-       s3.key
-       server.port 
-       spring.datasource.url 
-       spring.datasource.username  
-       spring.datasource.password 
-       email.userName
-       email.password
-       twilio.acount_id
-       twilio.auth_token
+   * NOTE - Update application.properties file for below parameters -</br>
+       aws.access_key_id</br>
+       aws.secret_access_key</br>
+       s3.bucket</br>
+       s3.region</br>
+       s3.uploadfile</br>
+       s3.key</br>
+       server.port </br>
+       spring.datasource.url</br>
+       spring.datasource.usernam </br>
+       spring.datasource.password</br>
+       email.userName</br>
+       email.password</br>
+       twilio.acount_id</br>
+       twilio.auth_token</br>
 
 ### Steps to run the project locally
--Download the source code from GIT and import it as a maven project into eclipse. When the project is imported the maven pom.xml will resolve and import all the dependencies. The dependencies include AWS SDK, Spring Boot.
--Run Project in eclipse as spring boot App
--Check the application on "http://localhost:"server.port"/event-planner/"
+-Download the source code from GIT and import it as a maven project into eclipse. When the project is imported the maven pom.xml will resolve and import all the dependencies. The dependencies include AWS SDK, Spring Boot.</br>
+-Run Project in eclipse as spring boot App</br>
+-Check the application on "http://localhost:"server.port"/event-planner/"</br>
 
